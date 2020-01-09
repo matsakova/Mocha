@@ -1,9 +1,12 @@
 const assert = require('assert');
+const {expect} = require('chai');
+
 const {sum, mult, isAdult, isPalindrome, noSpace, maxValue, monkeyCount, divide, outed, addingProperty} = require ('../index.js');
 
 describe('function sum',() => {
     it('should function sum equal 6', () => {
         assert.equal(sum(2, 4),6);
+        expect(sum(2,4)).eq(6);
     });
 
     it('should function sum not equal 0', () => {
