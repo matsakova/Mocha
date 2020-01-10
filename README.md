@@ -18,6 +18,8 @@ Here you need to change "name": "mocha" to "name": "mocha1"
 8. In **package.json** file after "test" script on the next line write 
 another script "start": "node index.js"
 9. To run this script type **npm start** or **npm run start** in Terminal
+
+#### Mocha installation:
 10. Type **npm install mocha** in Terminal. 
 Using this command we create **Mocha** package in the Project.
 11. Create new directory **test** in Mocha Project
@@ -26,4 +28,13 @@ Here you can write your tests
 13. Inside package.json file replace "test": "echo \ Error: no test specified\ && exit 1"
 to "test": "mocha"
 14. To test your code from **index.js** you need to type **npm test** in Terminal
+
+#### Chai installation: 
+
+15. Type **npm install chai** in Terminal
+
+As a result of these operations you will get 2 main files:
+* **index.js** contains functions
+* **index.spec.js** contains tests to these functions
+
 
