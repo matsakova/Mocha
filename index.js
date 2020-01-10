@@ -6,17 +6,18 @@ function mult(a, b){
 }
 
 function isAdult(number){
-    if (number < 0) return undefined;
+    if (number < 21 && number >= 0) return false;
     else if (number >= 21) return true;
-    else return false;
 }
 
 function isPalindrome(str){
     let s = '';
-    for (let i = str.length - 1; i >= 0; i--){
-        s += str[i];
-    }
-    return s.toLowerCase() === str.toLowerCase();
+    if (typeof(str) === 'string') {
+        for (let i = str.length - 1; i >= 0; i--) {
+            s += str[i];
+        }
+        return s.toLowerCase() === str.toLowerCase();
+    } else return 'this is not a string!';
 }
 
 function noSpace(x){
@@ -24,12 +25,13 @@ function noSpace(x){
 }
 
 function maxValue(arr) {
-    return Math.max(...arr);
+    if (Array.isArray(arr)) return Math.max(...arr);
+    else return undefined;
 }
 
 function monkeyCount(n){
-    let array = [];
-    if (n <= 0) return undefined;
+    const array = [];
+    if (n < 0) return undefined;
     else {
         for (let i = 1; i <= n; i++) {
             array.push(i);
